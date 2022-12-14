@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-&-0tff3w_zxy87l9+&v)fom-gpe=xl4(l^*jq45c908lu%86xh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['54.226.70.49','ec2-54-226-70-49.compute-1.amazonaws.com','127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -38,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -110,3 +110,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'proyectoaws',
+        'USER': 'admin',
+        'PASSWORD': 'ednover14',
+        'HOST': 'proyectoaws-db.c8oopz5eylz4.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
+    }
+}
